@@ -1,6 +1,6 @@
 let gramaMililitro = document.querySelector('.menu')
 let peso = document.querySelectorAll('.peso')
-let preco = document.querySelectorAll('.form-preco input')
+let preco = document.querySelectorAll('.form-peso input')
 preco[0].focus()
 
 gramaMililitro.addEventListener('click',(e)=>{
