@@ -83,7 +83,7 @@ body{
 .form-peso{
     display: flex;
     justify-content: space-between;
-    width: 220px;
+    width: 260px;
 }
 
 .form-preco input,
@@ -94,7 +94,7 @@ body{
 
 .form-preco label,
 .form-peso label{
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .produto1,
