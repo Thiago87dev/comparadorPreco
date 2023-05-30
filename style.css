@@ -103,6 +103,25 @@ body{
     border-radius: 10px;
 }
 
+.btn-calcular{
+    margin-top: 20px;
+    width: 200px;
+    height: 50px;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.btn-calcular:hover{
+    background-color: rgb(106, 75, 135);
+}
+
+.btn-calcular:active{
+    background-color: rgb(33, 31, 35);
+}
 
 
 
