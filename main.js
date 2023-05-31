@@ -32,7 +32,7 @@ function novoCalculo(){
     document.querySelector('#preco1').value = ''
     document.querySelector('#preco2').value = ''
 
-    peso1.textContent = ' '
+    window.scrollTo(0,0)
 }
 
 function calcularPreco(){
@@ -87,6 +87,7 @@ function calcularPreco(){
     
                 resultado.style.display = 'flex'
                 frente.style.display = 'none'
+                window.scrollTo(0,0)
             }
         })
           
