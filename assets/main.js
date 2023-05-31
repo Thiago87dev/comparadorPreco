@@ -1,6 +1,7 @@
 let gramaMililitro = document.querySelector('.menu')
 let peso = document.querySelectorAll('.peso')
-let inputPreco = document.querySelectorAll('.form-peso input')
+let inputPeso = document.querySelectorAll('.form-peso input')
+let inputPreco = document.querySelectorAll('.form-preco input')
 let calcular = document.querySelector('#btn-calcular')
 let resultado = document.querySelector('.resultado')
 let frente = document.querySelector('.frente')
@@ -10,15 +11,22 @@ let campoResultado = document.querySelectorAll('.campo-resultado')
 let btnNovoCacl = document.querySelector('.btn-novo-calculo')
 let btnInterrogacao = document.querySelector('.img')
 
-inputPreco[0].focus()
+inputPeso[0].focus()
 
 gramaMililitro.addEventListener('click',(e)=>{
     let conteudoLi = e.target.textContent;
     peso.forEach(i =>{
         i.textContent = conteudoLi
     })
-
-    inputPreco[0].focus()
+    if(inputPeso[0].value === ''){
+        inputPeso[0].focus()
+    }else if(inputPreco[0].value === ''){
+        inputPreco[0].focus()
+    }else if(inputPeso[1].value === ''){
+        inputPeso[1].focus()
+    }else if (inputPreco[1].value === ''){
+        inputPreco[1].focus()
+    }
 })
 
 btnInterrogacao.addEventListener('click', ()=>{
@@ -38,6 +46,7 @@ function novoCalculo(){
     document.querySelector('#preco1').value = ''
     document.querySelector('#preco2').value = ''
 
+    inputPeso[0].focus()
     window.scrollTo(0,0)
 }
 
@@ -84,7 +93,7 @@ function calcularPreco(){
                     pesoBarato = `${peso2}(ml)`
                     maisB.innerHTML = `Produto de ${pesoBarato} é o mais barato`
                 }else{
-                    maisB.innerHTML = `Os dois prudutos estão com o mesmo preço`
+                    maisB.innerHTML = `Preços iguais`
                 }
                 
                 campoResultado[0].innerHTML = `O preço por mililitro do primeiro produto (com ${peso1} mililitros) é de ${precoPorPesoProduto1.toFixed(2).padEnd(4, '0')} centavos`

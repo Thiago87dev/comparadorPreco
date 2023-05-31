@@ -138,10 +138,14 @@ body{
 .resultado-final{   
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 350px;
     height: 80px;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 25px;
+    font-size: 25px; 
+    border: solid 1px purple;
+    border-radius: 8px;
     
 }
 
