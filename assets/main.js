@@ -74,12 +74,13 @@ function calcularPreco(){
                     maisB.innerHTML = `Preços iguais`
                 }
                 
-                campoResultado[0].innerHTML = `O preço por grama do primeiro produto (com ${peso1} gramas) é de ${precoPorPesoProduto1.toFixed(2).padEnd(4, '0')} centavos`
+                campoResultado[0].innerHTML = `O preço por grama do primeiro produto (com ${peso1} gramas) é de ${precoPorPesoProduto1.toFixed(2).padEnd(2, '0')} centavos`
 
-                campoResultado[1].innerHTML = `O preço por grama do segundo produto (com ${peso2} gramas) é de ${precoPorPesoProduto2.toFixed(2).padEnd(4, '0')} centavos`
+                campoResultado[1].innerHTML = `O preço por grama do segundo produto (com ${peso2} gramas) é de ${precoPorPesoProduto2.toFixed(2).padEnd(2, '0')} centavos`
     
                 resultado.style.display = 'flex'
                 frente.style.display = 'none'
+                window.scrollTo(0,0)
             }else{
                 let precoPorPesoProduto1 = preco1 / peso1
                 let precoPorPesoProduto2 = preco2 / peso2
