@@ -166,6 +166,7 @@ body{
 .img{
     width: 50px;
     margin-left: 250px;
+    cursor: pointer;
 }
 
 

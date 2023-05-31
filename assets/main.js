@@ -8,6 +8,7 @@ let resFinal = document.querySelector('.resultado-final')
 let maisB = document.querySelector('.mais-barato')
 let campoResultado = document.querySelectorAll('.campo-resultado')
 let btnNovoCacl = document.querySelector('.btn-novo-calculo')
+let btnInterrogacao = document.querySelector('.img')
 
 inputPreco[0].focus()
 
@@ -20,8 +21,13 @@ gramaMililitro.addEventListener('click',(e)=>{
     inputPreco[0].focus()
 })
 
+btnInterrogacao.addEventListener('click', ()=>{
+    alert('Use esse app quando tiver um produto com 2 preços e medidas diferentes e você quer saber qual vale mais a pena comprar (mais barato).')
+})
 calcular.addEventListener('click', calcularPreco)
 btnNovoCacl.addEventListener('click', novoCalculo)
+
+
 
 function novoCalculo(){
     resultado.style.display = 'none'
