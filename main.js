@@ -57,7 +57,7 @@ function calcularPreco(){
                     pesoBarato = `${peso2}(g)`
                     maisB.innerHTML = `Produto de ${pesoBarato} é o mais barato`
                 }else{
-                    maisB.innerHTML = `Os dois prudutos estão com o mesmo preço`
+                    maisB.innerHTML = `Preços iguais`
                 }
                 
                 campoResultado[0].innerHTML = `O preço por grama do primeiro produto (com ${peso1} gramas) é de ${precoPorPesoProduto1.toFixed(2).padEnd(4, '0')} centavos`
