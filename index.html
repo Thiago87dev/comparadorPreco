@@ -10,40 +10,47 @@
 <body>
     <main class="main">
         <h1 class="titulo">Comparador de preço</h1>
-        <ul class="menu">
-            <li class="item-menu">Gramas (g)</li>
-            <li class="item-menu">Miligramas (ml)</li>
-        </ul>
-        <section class="secao-produtos">
-            <div class="produtos produto1">
-                <h2>Produto 1</h2>
-                <div class="form-peso">
-                    <label class="peso" for="peso1">Gramas (g)</label>
-                    <input type="number" name="peso1" id="peso1">
+        <div class="frente">
+            <ul class="menu">
+                <li class="item-menu">Gramas (g)</li>
+                <li class="item-menu">Miligramas (ml)</li>
+            </ul>
+            <section class="secao-produtos">
+                <div class="produtos produto1">
+                    <h2>Produto 1</h2>
+                    <div class="form-peso">
+                        <label class="peso" for="peso1">Gramas (g)</label>
+                        <input type="number" name="peso1" id="peso1">
+                    </div>
+                    <div class="form-preco">
+                        <label for="preco1">Preço</label>
+                        <input type="number" name="preco1" id="preco1">
+                    </div>
                 </div>
-                <div class="form-preco">
-                    <label for="preco1">Preço</label>
-                    <input type="number" name="preco1" id="preco1">
+                <div class="produtos produto2">
+                    <h2>Produto 2</h2>
+                    <div class="form-peso">
+                        <label class="peso" for="peso2">Gramas (g)</label>
+                        <input type="number" name="peso2" id="peso2">
+                    </div>
+                    <div class="form-preco">
+                        <label for="preco2">Preço</label>
+                        <input type="number" name="preco2" id="preco2">
+                    </div>
                 </div>
-            </div>
-            <div class="produtos produto2">
-                <h2>Produto 2</h2>
-                <div class="form-peso">
-                    <label class="peso" for="peso2">Gramas (g)</label>
-                    <input type="number" name="peso2" id="peso2">
-                </div>
-                <div class="form-preco">
-                    <label for="preco2">Preço</label>
-                    <input type="number" name="preco2" id="preco2">
-                </div>
-            </div>
-            <button class="btn-calcular">Calcular</button>
-        </section>
-        <section>
-            <div>
+                <button id="btn-calcular" class="btn-calcular">Calcular</button>
+            </section>
+        </div>
+        <div class="resultado">
+            <pre class="resultado-final"><span class="mais-barato">produto</span></pre>
 
+            <div class="produtos produto1 campo-resultado campo-resultado1">   
             </div>
-        </section>
+
+            <div class="produtos produto2 campo-resultado">
+            </div>
+            <button class="btn-calcular btn-novo-calculo">Novo Calculo</button>
+        </div>
     </main>
 
     <script src="main.js"></script>
