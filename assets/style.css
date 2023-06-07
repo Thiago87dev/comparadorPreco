@@ -153,6 +153,7 @@ body{
 .campo-resultado{
     margin: 10px auto;
     font-size: 20px;
+    text-align: center;
 }
 .campo-resultado1{
     margin-top: 30px;
