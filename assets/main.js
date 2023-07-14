@@ -81,7 +81,7 @@ function calcularPreco(){
                 resultado.style.display = 'flex'
                 frente.style.display = 'none'
                 window.scrollTo(0,0)
-            }else{
+            }else if (i.textContent === 'Mililitros (ml)'){
                 let precoPorPesoProduto1 = preco1 / peso1
                 let precoPorPesoProduto2 = preco2 / peso2
            
@@ -96,9 +96,31 @@ function calcularPreco(){
                     maisB.innerHTML = `Preços iguais`
                 }
                 
-                campoResultado[0].innerHTML = `O preço por mililitro do primeiro produto (com ${peso1} mililitros) é de ${precoPorPesoProduto1.toFixed(2).padEnd(4, '0')} centavos`
+                campoResultado[0].innerHTML = `O preço por mililitro do primeiro produto (com ${peso1} mililitros) é de ${precoPorPesoProduto1.toFixed(2).padEnd(2, '0')} centavos`
 
-                campoResultado[1].innerHTML = `O preço por mililitro do segundo produto (com ${peso2} mililitros) é de ${precoPorPesoProduto2.toFixed(2).padEnd(4, '0')} centavos`
+                campoResultado[1].innerHTML = `O preço por mililitro do segundo produto (com ${peso2} mililitros) é de ${precoPorPesoProduto2.toFixed(2).padEnd(2, '0')} centavos`
+    
+                resultado.style.display = 'flex'
+                frente.style.display = 'none'
+                window.scrollTo(0,0)
+            }else{
+                let precoPorPesoProduto1 = preco1 / peso1
+                let precoPorPesoProduto2 = preco2 / peso2
+           
+                let pesoBarato
+                if(precoPorPesoProduto1 < precoPorPesoProduto2){
+                    pesoBarato = `${peso1}(u)`
+                    maisB.innerHTML = `Produto de ${pesoBarato} é o mais barato`
+                }else if (precoPorPesoProduto1 > precoPorPesoProduto2){
+                    pesoBarato = `${peso2}(u)`
+                    maisB.innerHTML = `Produto de ${pesoBarato} é o mais barato`
+                }else{
+                    maisB.innerHTML = `Preços iguais`
+                }
+                
+                campoResultado[0].innerHTML = `O preço por unidade do primeiro produto (com ${peso1} unidades) é de ${precoPorPesoProduto1.toFixed(2).padEnd(2, '0')} centavos`
+
+                campoResultado[1].innerHTML = `O preço por unidade do segundo produto (com ${peso2} unidades) é de ${precoPorPesoProduto2.toFixed(2).padEnd(2, '0')} centavos`
     
                 resultado.style.display = 'flex'
                 frente.style.display = 'none'
